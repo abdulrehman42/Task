@@ -6,8 +6,7 @@ import com.example.task.repository.Repository
 
 class viewmodelFactory(private val repository:Repository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        // If model class is correct return them as ViewModel with Value
-        if (modelClass.isAssignableFrom(AddfragmentViewModel::class.java)) {
+       (modelClass.isAssignableFrom(AddfragmentViewModel::class.java)) {
             return AddfragmentViewModel(repository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel Class")
