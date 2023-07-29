@@ -10,7 +10,7 @@ import androidx.room.Update
 
 @Dao
 interface Dao {
-    @Insert(onConflict = OnConflictStrategy.IGNORE) //if some data is same/conflict, it'll be replace with new data.
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertNot(entiti: Entiti)
     @Update
     suspend fun updateNot(entiti: Entiti)
